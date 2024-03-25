@@ -53,3 +53,9 @@ def from_df_into_output_folder(output_folder, df_breast, df_lymphnode):
     df_breast.to_excel(os.path.join(output_folder, "Data_Breast.xlsx"), index=True)
     df_lymphnode.to_excel(os.path.join(output_folder, "Data_Lymphnode.xlsx"), index=True)
 
+
+def process_data(input_dir, output_dir):
+    df_breast, df_lymphnode = from_input_folder_into_df(input_dir)
+    from_df_into_output_folder(output_dir, df_breast, df_lymphnode)
+
+
