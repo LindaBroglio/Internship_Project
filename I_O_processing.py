@@ -5,7 +5,11 @@ import sys
 
 def get_in_out_folders():
     input_path, output_path = parse_arguments()
-    check_arguments(input_path, output_path)
+    check_in_folder(input_path)
+    if output_path is not None:
+        print("Output directory:", output_path)
+    else:
+        output_path = make_default_out_folder()
     return input_path, output_path
 
 
@@ -21,12 +25,8 @@ def parse_arguments():
     return input_path, output_path
 
 
-def check_arguments(input_path, output_path):
+def check_in_folder(input_path):
     print("Input directory:", input_path)
-    if output_path is not None:
-        print("Output directory:", output_path)
-    else:
-        make_default_out_folder()
     if not os.path.exists(input_path):
         sys.exit("Exiting program: invalid input directory")
     if len(os.listdir(input_path)) == 0:
@@ -36,5 +36,4 @@ def check_arguments(input_path, output_path):
 def make_default_out_folder():
     output_path = os.path.join(os.getcwd(), "data", "output_default_folder")
     print("No output directory given, results will be at", output_path)
-
-
+    return output_path

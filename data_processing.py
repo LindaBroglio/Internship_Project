@@ -6,25 +6,32 @@ import os
 def process_into_row(file):
     patient_name = os.path.basename(file).split('_')[0]
     start_processing = False
+    row_breast, row_lymphnode = initiate_rows(patient_name)
+    with open(file, "r") as file:
+        for line in file:
+            # check if it's ok to start reading
+            if line.startswith('"original","shape","Elongation"'):
+                start_processing = True
+            # column name and cell input
+            if start_processing:
+                process_line_of_raw_file(line, row_breast, row_lymphnode)
+    return row_breast, row_lymphnode
+
+
+def initiate_rows(patient_name):
     row_breast = {}
     row_lymphnode = {}
     row_breast['Patient'] = patient_name
     row_lymphnode['Patient'] = patient_name
-    with open(file, "r") as file:
-        for line in file:
-
-            # check if it's ok to start reading
-            if line.startswith('"original","shape","Elongation"'):
-                start_processing = True
-
-            # column name and cell input
-            if start_processing:
-                parts = line.strip().split(",")
-                key = '_'.join(map(lambda x: re.sub(r'"', '', x), [parts[2], parts[1], parts[0]]))
-                for i in range(3, len(parts) - 1, 2):
-                    row_breast[key] = re.sub(r'"', '', parts[i])
-                    row_lymphnode[key] = re.sub(r'"', '', parts[i + 1])
     return row_breast, row_lymphnode
+
+
+def process_line_of_raw_file(line, row_breast, row_lymphnode):
+    parts = line.strip().split(",")
+    key = '_'.join(map(lambda x: re.sub(r'"', '', x), [parts[2], parts[1], parts[0]]))
+    for i in range(3, len(parts) - 1, 2):
+        row_breast[key] = re.sub(r'"', '', parts[i])
+        row_lymphnode[key] = re.sub(r'"', '', parts[i + 1])
 
 
 def add_patient_row(patient_file, data_breast, data_lymphnode):
@@ -57,5 +64,3 @@ def from_df_into_output_folder(output_folder, df_breast, df_lymphnode):
 def process_data(input_dir, output_dir):
     df_breast, df_lymphnode = from_input_folder_into_df(input_dir)
     from_df_into_output_folder(output_dir, df_breast, df_lymphnode)
-
-
