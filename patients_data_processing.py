@@ -18,6 +18,14 @@ def process_into_row(file):
     return row_breast, row_lymphnode
 
 
+def get_patients_id(input_folder):
+    patients_id = []
+    for filename in os.listdir(input_folder):
+        if filename.endswith(".csv"):
+            patients_id.append(os.path.basename(filename).split('_')[0])
+    return patients_id
+
+
 def initiate_rows(patient_name):
     row_breast = {}
     row_lymphnode = {}

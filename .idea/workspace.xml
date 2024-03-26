@@ -1,20 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e63e59cd-26c7-4599-9332-2f5a8cacf774" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/FirstPycharm.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output_default_folder/Data_Breast.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/output_default_folder/Data_Breast.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output_default_folder/Data_Lymphnode.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/output_default_folder/Data_Lymphnode.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raw_data/real_responses_CT.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/responses_data_processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/I_O_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/I_O_processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/ANON6477_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/ANON6477_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/CONTR11_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/CONTR11_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/CONTR12_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/CONTR12_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/CONTR1_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/CONTR1_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/CONTR2_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/CONTR2_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/CONTR3_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/CONTR3_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/CONTR4_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/CONTR4_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/CONTR5_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/CONTR5_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/CONTR6_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/CONTR6_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/CONTR7_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/CONTR7_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/CONTR8_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/CONTR8_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/CONTR9_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/CONTR9_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/RAD10_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/RAD10_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/RAD11_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/RAD11_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/RAD12_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/RAD12_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/RAD13_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/RAD13_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/RAD1_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/RAD1_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/RAD2_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/RAD2_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/RAD3_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/RAD3_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/RAD4_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/RAD4_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/RAD5_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/RAD5_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/RAD6_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/RAD6_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/RAD7_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/RAD7_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/RAD8_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/RAD8_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CT_Patients/RAD9_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/CT_Patients/RAD9_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/input_folder/ANON6477_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/just_two_patients/ANON6477_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/input_folder/RAD1_filters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/raw_data/just_two_patients/RAD1_filters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output_default_folder/Data_Breast.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/processed_data/output_default_folder/Data_Breast.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output_default_folder/Data_Lymphnode.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/processed_data/output_default_folder/Data_Lymphnode.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output_folder/Data_Breast.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/processed_data/output_folder/Data_Breast.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output_folder/Data_Lymphnode.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/processed_data/output_folder/Data_Lymphnode.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/patients_data_processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -22,10 +62,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2eDivanDPvnXnoKiXkGVHqiEg7Y" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -34,11 +74,24 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.main.executor": "Run",
+    "Python.responses_data_processing.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "renamed__repo",
+    "last_opened_file_path": "/Users/linda/Desktop/Internship/Internship_Project/data/real_responses"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/real_responses" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/processed_data" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/raw_data" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Internship_Project" />
@@ -54,7 +107,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="-i &quot;data/CT_Patients&quot; -o &quot;data/output_folder&quot;" />
+      <option name="PARAMETERS" value="-i &quot;raw_data/CT_Patients&quot; -o &quot;processed_data/output_folder&quot; -r &quot;raw_data/real_responses_CT.xlsx&quot;" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
