@@ -71,4 +71,6 @@ def from_df_into_output_folder(output_folder, df_breast, df_lymphnode):
 
 def process_data(input_dir, output_dir):
     df_breast, df_lymphnode = from_input_folder_into_df(input_dir)
-    from_df_into_output_folder(output_dir, df_breast, df_lymphnode)
+    if (not os.path.isfile(os.path.join(output_dir, "Data_Breast.xlsx"))
+            or not os.path.isfile(os.path.join(output_dir, "Data_Lymphnode.xlsx"))):
+        from_df_into_output_folder(output_dir, df_breast, df_lymphnode)
