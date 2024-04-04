@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e63e59cd-26c7-4599-9332-2f5a8cacf774" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/I_O_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preprocessing/I_O_folders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_preprocessing/patients_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preprocessing/patients_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_preprocessing/responses_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preprocessing/responses_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dummy_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/dummy_classifier.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patients_data_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preprocessing/patients_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processed_data/output_folder/Data_Breast.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/processed_data/output_folder/Data_Breast.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processed_data/output_folder/Data_Lymphnode.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/processed_data/output_folder/Data_Lymphnode.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/responses_data_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preprocessing/responses_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

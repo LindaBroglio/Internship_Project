@@ -38,22 +38,11 @@ def dummy_classifier(final_df):
 
 """
 
-In this example:
-
-We generate some dummy binary classification data using make_classification.
-Split the data into training and testing sets using train_test_split.
-Create a DummyClassifier with a specified strategy ('most_frequent', 'stratified', 'uniform', or 'constant').
-Train the dummy classifier on the training data.
-Make predictions on the test data using predict.
-Evaluate the classifier using metrics like accuracy, confusion matrix, and classification report.
-You can change the strategy parameter in the DummyClassifier constructor to one of the following:
+metrics: accuracy, confusion matrix, and classification report.
 
 'most_frequent': Predicts the most frequent class in the training data.
 'stratified': Predicts random classes according to the training data distribution.
 'uniform': Predicts uniformly random classes.
 'constant': Predicts a constant class label provided by the constant parameter (default is 0).
-
-
-
 
 """
