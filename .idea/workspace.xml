@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e63e59cd-26c7-4599-9332-2f5a8cacf774" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_preprocessing/patients_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preprocessing/patients_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_preprocessing/responses_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preprocessing/responses_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dummy_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/dummy_classifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature_selection.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature_selection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +43,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;renamed__repo&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;all__through__df&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/linda/Desktop/Internship/Internship_Project/data/real_responses&quot;
   }
 }</component>
