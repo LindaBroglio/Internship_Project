@@ -30,3 +30,32 @@ def remove_WL_features(df):
     filtered_list = [elem for elem in original_cols if any(substr in elem for substr in unique_strings)]
     return remove_cols(df, filtered_list, "list")
 
+
+def remove_unique_value_features(df):
+    not_unique = df.nunique()
+    cols_to_drop = not_unique[not_unique == 1].index
+    return remove_cols(df, cols_to_drop, "list")
+
+
+def initial_cleaning(df):
+    create_cols_file_from_df(df, "original_cols")
+    df_reduced = remove_WL_features(df)
+    create_cols_file_from_df(df_reduced, "filters_cols_removed")
+    df_reduced = remove_unique_value_features(df_reduced)
+    create_cols_file_from_df(df_reduced, "no_unique_values_cols_removed")
+    return df_reduced
+
+
+def random_feature_selection(df, n):
+    patients=df['Patient'].tolist()
+    responses=df['Response'].tolist()
+    df.drop('Patient', axis=1, inplace=True)
+    df.drop('Response', axis=1, inplace=True)
+    df.sample(n, axis=1)
+    df.insert(loc=0, column='Patient', value=patients)
+    df.insert(loc=1, column='Response', value=responses)
+    return df
+
+
+
+
