@@ -6,7 +6,7 @@ def remove_cols(df, cols, cols_format):
         cols = get_cols_list_from_file(cols)
     elif cols_format != "list":
         raise ValueError("Unsupported format for the columns to remove. Please use 'file' or 'list'.")
-    df.drop(cols, axis=1, inplace=True)
+    df = df.drop(cols, axis=1)
     return df
 
 
@@ -47,14 +47,14 @@ def initial_cleaning(df):
 
 
 def random_feature_selection(df, n):
-    patients=df['Patient'].tolist()
-    responses=df['Response'].tolist()
-    df.drop('Patient', axis=1, inplace=True)
-    df.drop('Response', axis=1, inplace=True)
-    df.sample(n, axis=1)
-    df.insert(loc=0, column='Patient', value=patients)
-    df.insert(loc=1, column='Response', value=responses)
-    return df
+    patients = df['Patient'].tolist()
+    responses = df['Response'].tolist()
+    df1 = df.drop('Patient', axis=1)
+    dfnew = df1.drop('Response', axis=1)
+    dfret = dfnew.sample(n, axis=1)
+    dfret.insert(loc=0, column='Patient', value=patients)
+    dfret.insert(loc=1, column='Response', value=responses)
+    return dfret
 
 
 
