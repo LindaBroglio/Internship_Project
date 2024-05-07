@@ -18,8 +18,9 @@ def main():
     create_cols_file_from_df(df_breast_100, "original_cols")
 
     df_breast_100_shape = df_breast_100[get_feature_list_given_word_filter(df_breast_100, "shape")]
-    print(df_breast_100_shape.columns)
-    pair_grid_plot(df_breast_100)
+    #print(df_breast_100_shape.columns)
+    #pair_grid_plot(df_breast_100)
+    print(df_breast_100['LeastAxisLength_shape_original'].dtype)
     create_cols_file_from_df(df_breast_100, "dfb_shape")
 
     #plot_boxes(df_breast, df_breast_cleaned)
