@@ -29,19 +29,14 @@ def pair_grid_plot(og_df, word_filter, height=0.8, aspect=1.5, marker_size=8,
     g.map_diag(plt.hist)
     g.map_lower(sns.scatterplot, s=marker_size)
     g.add_legend()
-
-    #for ax in g.axes.flatten():
+    # for ax in g.axes.flatten():
     #    ax.set_xlabel(ax.get_xlabel(), fontsize=label_fontsize, rotation=label_rotation)
     #    ax.set_ylabel(ax.get_ylabel(), fontsize=label_fontsize, rotation=label_rotation)
-
-    for ax in g.axes[-1,:]:
+    for ax in g.axes[-1, :]:
         ax.set_xlabel(ax.get_xlabel(), fontsize=label_fontsize, rotation=label_rotation)
-    for ax in g.axes[:,0]:
+    for ax in g.axes[:, 0]:
         ax.set_ylabel(ax.get_ylabel(), fontsize=label_fontsize, rotation=label_rotation)
-
-
     plt.tight_layout()
-
     if save_path:
         save_path = save_path + word_filter + ".pdf"
         folder, filename = os.path.split(save_path)
@@ -50,3 +45,13 @@ def pair_grid_plot(og_df, word_filter, height=0.8, aspect=1.5, marker_size=8,
         plt.savefig(save_path)
     else:
         plt.show()
+
+
+def pair_grid_plot_all(df_breast_100):
+    pair_grid_plot(df_breast_100, "shape")
+    pair_grid_plot(df_breast_100, "firstorder")
+    pair_grid_plot(df_breast_100, "glcm")
+    pair_grid_plot(df_breast_100, "gldm")
+    pair_grid_plot(df_breast_100, "glrlm")
+    pair_grid_plot(df_breast_100, "glszm")
+    pair_grid_plot(df_breast_100, "ngtdm")

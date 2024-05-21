@@ -37,12 +37,18 @@ def remove_unique_value_features(df):
     return remove_cols(df, cols_to_drop, "list")
 
 
+def remove_the_word_original(df):
+    df.columns = df.columns.str.replace('_original', "")
+    return df
+
+
 def initial_cleaning(df):
     create_cols_file_from_df(df, "original_cols")
     df_reduced = remove_WL_features(df)
+    df_reduced = remove_the_word_original(df_reduced)
     create_cols_file_from_df(df_reduced, "filters_cols_removed")
     df_reduced = remove_unique_value_features(df_reduced)
-    create_cols_file_from_df(df_reduced, "no_unique_values_cols_removed")
+    #create_cols_file_from_df(df_reduced, "no_unique_values_cols_removed")
     return df_reduced
 
 
