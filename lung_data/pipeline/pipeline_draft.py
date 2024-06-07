@@ -1,52 +1,79 @@
-import numpy as np
 import pandas as pd
-import seaborn as sns
-from matplotlib import pyplot as plt
-from sklearn.impute import SimpleImputer
-from sklearn.metrics import confusion_matrix, classification_report
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.preprocessing import PowerTransformer
-from sklearn.compose import ColumnTransformer
-from sklearn.model_selection import train_test_split
+from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.pipeline import Pipeline
 
-from lung_data.LDA import get_x_y
+from lung_data.data_preprocessing.importing import from_xls_into_df
 
 
-def build_pipeline(df, y_column, model):
-    x, y = get_x_y(df, y_column)
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
+class NaNChecker(BaseEstimator, TransformerMixin):
+    def __init__(self, df_name):
+        self.df_name = df_name
 
-    pre_process_pipe = Pipeline(steps=[
-        ("missing steps", SimpleImputer(strategy='mean')),  # also takes care of nan
-        ("scaling", MinMaxScaler())
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        nan_count = X.isna().sum().sum()
+        if nan_count > 0:
+            print(f"{self.df_name} contains {nan_count} NaN values.")
+        else:
+            print(f"{self.df_name} does not contain any NaN values.")
+        return X
+
+
+class ColumnTypeConverter(BaseEstimator, TransformerMixin):
+    def __init__(self, columns, target_type):
+        self.columns = columns
+        self.target_type = target_type
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        for column in self.columns:
+            X[column] = X[column].astype(self.target_type)
+        return X
+
+
+class ColumnDropper(BaseEstimator, TransformerMixin):
+    def __init__(self, columns):
+        self.columns = columns
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        return X.drop(columns=self.columns)
+
+
+def process_data():
+    df_PET, df_CT = from_xls_into_df(1)
+
+    # Define the pipeline for df_PET
+    pet_pipeline = Pipeline([
+        ('nan_checker', NaNChecker(df_name="df_PET")),
+        ('type_converter', ColumnTypeConverter(columns=['Patient_ID', 'Type'], target_type='string')),
+        ('column_dropper', ColumnDropper(columns=['Patient_ID']))
     ])
 
-    numeric_fit_result = pre_process_pipe.fit(df).transform(df).shape
+    # Define the pipeline for df_CT
+    ct_pipeline = Pipeline([
+        ('nan_checker', NaNChecker(df_name="df_CT")),
+        ('type_converter', ColumnTypeConverter(columns=['Patient_ID', 'Type'], target_type='string')),
+        ('column_dropper', ColumnDropper(columns=['Patient_ID']))
+    ])
 
-    columns = np.array(x.columns)
-    columns = columns[:-1]
+    # Process the data
+    df_PET_processed = pet_pipeline.fit_transform(df_PET)
+    df_CT_processed = ct_pipeline.fit_transform(df_CT)
 
-    numerical_transformed = pd.DataFrame(data=pre_process_pipe.fit_transform(df[columns]), columns=columns)
-    for feature in numerical_transformed.columns:
-        plt.figure()
-        sns.histplot(data=numerical_transformed, x=feature)
+    # Printing the data types for verification
+    print("Final data types in df_PET:  ", df_PET_processed.dtypes.value_counts().to_dict())
+    print("Final data types in df_CT:   ", df_CT_processed.dtypes.value_counts().to_dict())
 
-    #pre_process_pipe.fit(x_train, y_train)
+    # Placeholder for plotting (uncomment and implement as needed)
+    # pair_grid_plot_all(df_PET_processed, "PET")
+    # pair_grid_plot_all(df_CT_processed, "CT")
 
-    model_pipeline = Pipeline(steps=[
-        ("preprocessing", pre_process_pipe),
-        ("model", model)]
-    )
+    return df_PET_processed, df_CT_processed
 
-    #model_pipeline.fit(x_train, y_train)
-
-    model_output = model_pipeline.predict(x_test)
-    cm = confusion_matrix(y_test, model_output)
-    plt.figure(figsize=(10, 7))
-    sns.heatmap(cm, annot=True)
-    plt.title('Confusion Matrix - Test Data')
-    plt.xlabel('Predicted Label')
-    plt.ylabel('True Label')
-    plt.show()
-    #print(classification_report(y_test, model_output))

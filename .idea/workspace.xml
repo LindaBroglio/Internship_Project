@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e63e59cd-26c7-4599-9332-2f5a8cacf774" name="Changes" comment="pre python upgrade">
-      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/PipelineElisabetta-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lung_data/LDA.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lung_data/correlation_analysis/anova.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pipeline_elisabetta/.ipynb_checkpoints/PipelineElisabetta-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pipeline_elisabetta/PipelineElisabetta.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pipeline_elisabetta/heart.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lung_data/correlation_analysis/response_correlation.py" beforeDir="false" afterPath="$PROJECT_DIR$/lung_data/pipeline/pipeline_draft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local_ts_data/box_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/local_ts_data/box_plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local_ts_data/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/local_ts_data/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lung_data/LDA.py" beforeDir="false" afterPath="$PROJECT_DIR$/lung_data/LDA.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lung_data/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/lung_data/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lung_data/pipeline/pipeline_draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/lung_data/pipeline/pipeline_draft.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,20 +39,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main (2).executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.main2.executor": "Run",
-    "Python.responses_data_processing.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "new__data",
-    "last_opened_file_path": "/Users/linda/Desktop/Internship/Internship_Project/pipeline_elisabetta",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.responses_data_processing.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;new__data&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/linda/Desktop/Internship/Internship_Project/pipeline_elisabetta&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pipeline_elisabetta" />
@@ -71,7 +68,29 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main (2)">
+    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Internship_Project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lung_data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lung_data/main.py" />
+      <option name="PARAMETERS" value="-i &quot;input_data&quot; -f &quot;input_file.xlsx&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Internship_Project" />
       <option name="ENV_FILES" value="" />
@@ -162,6 +181,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (2)" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.main" />

@@ -113,4 +113,3 @@ def plot_boxes(df_uncleaned, df_cleaned):
     sn.violinplot(x='algorithm', y='accuracies', hue='feature_selection', data=acc_df)
     plt.show()
 
-    #all_accuracies = [accuracies1, accuracies2, accuracies_rf_1, accuracies_rf_2, accuracies_gb_1, accuracies_gb_2]
