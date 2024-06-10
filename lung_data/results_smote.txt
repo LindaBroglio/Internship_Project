@@ -1,0 +1,18 @@
+Total number of patients: 483, of which 111 with metastasis
+
+Patients in training set: 595
+Patients in test set:      149
+
+Metastasis patients counter in:
+ - Training set              297.5400 ± 5.6594
+ - Validation set (actual)   74.4600 ± 5.6594
+ - Validation set (predicted)90.1400 ± 6.3498
+
+Confusion Matrix:
+[[71.73  2.73]
+ [18.41 56.13]]
+
+Accuracy: 0.8581 ± 0.0264
+Cut-off: 1.0000 ± 0.0000
+Sensitivity ("met" accuracy): 0.7961 ± 0.0397
+Specificity ("primary" acc.): 0.9543 ± 0.0283
