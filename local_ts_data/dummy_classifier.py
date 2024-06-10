@@ -2,8 +2,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.dummy import DummyClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, roc_curve, auc, \
-    ConfusionMatrixDisplay
+from sklearn.metrics import accuracy_score, confusion_matrix, roc_curve, auc
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import MinMaxScaler
 
 
 def get_x_y(final_df):

@@ -4,14 +4,13 @@ import matplotlib.pyplot as plt
 from sklearn.calibration import calibration_curve
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-from sklearn.metrics import roc_curve, auc
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_curve, auc
 from imblearn.over_sampling import SMOTE
 
 
 def get_x_y(df, y_column):
     x = df.loc[:, df.columns != y_column]
-    y = df.loc[:, y_column]
+    y = df.loc[:, [y_column]]
     return x, y
 
 
